@@ -61,7 +61,7 @@ const BookDetailPage = () => {
                 </Typography>
                 <Button
                   variant="outlined"
-                  sx={{ width: "fit-content" }}
+                  sx={{ width: "fit-content", mt: 2 }}
                   onClick={() => dispatch(addBookToFavorite(book))}
                 >
                   Add to Reading List

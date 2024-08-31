@@ -65,6 +65,7 @@ const ReadingPage = () => {
                 width: "12rem",
                 height: "27rem",
                 marginBottom: "2rem",
+                position: "relative",
               }}
             >
               <CardActionArea>
@@ -81,23 +82,27 @@ const ReadingPage = () => {
                   <Typography gutterBottom variant="body1" component="div">
                     {`${book.author}`}
                   </Typography>
-                  <Button
-                    sx={{
-                      position: "absolute",
-                      top: "5px",
-                      right: "5px",
-                      backgroundColor: "secondary.light",
-                      color: "secondary.contrastText",
-                      padding: "0",
-                      minWidth: "1.5rem",
-                    }}
-                    size="small"
-                    onClick={() => removeBook(book.id)}
-                  >
-                    &times;
-                  </Button>
                 </CardContent>
               </CardActionArea>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "5px",
+                  right: "5px",
+                  backgroundColor: "rgba(255, 255, 255, 0.5)",
+                  color: "secondary.contrastText",
+                  padding: "0",
+                  minWidth: "1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                }}
+                size="small"
+                onClick={() => removeBook(book.id)}
+              >
+                &times;
+              </div>
             </Card>
           ))}
         </Stack>
